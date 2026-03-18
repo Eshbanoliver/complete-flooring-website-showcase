@@ -11,6 +11,7 @@ import Services from './pages/Services';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 
+// Triggering a refresh to apply cached CSS changes
 function App() {
   return (
     <Router>

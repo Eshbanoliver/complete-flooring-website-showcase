@@ -18,7 +18,7 @@ const Home = () => {
       {/* Hero Section */}
       <Hero />
 
-      {/* About Section - Short Intro */}
+      {/* About Section - Creative Intro */}
       <section className="about-intro section-padding">
         <div className="container about-intro-grid">
           <motion.div 
@@ -28,12 +28,22 @@ const Home = () => {
             viewport={{ once: true }}
             className="about-intro-text"
           >
-            <h5 className="gradient-text subtitle">Who We Are</h5>
+            <div className="section-badge">
+                <span className="badge-dot"></span> Who We Are
+            </div>
             <h2 className="title">Crafting Beautiful <span className="gradient-text">Floors</span> with Precision</h2>
-            <p className="desc">Complete Flooring Company is Jaipur's leading destination for premium flooring solutions. With over 12 years of expertise, we specialize in high-quality wooden laminates, designer carpets, and modern interior elements that transform ordinary spaces into extraordinary masterpieces.</p>
+            <p className="desc dec-text">
+                Complete Flooring Company is Jaipur's leading destination for premium flooring solutions. We specialize in high-quality wooden laminates, designer carpets, and modern interior elements that transform ordinary spaces into extraordinary masterpieces.
+            </p>
+            
+            <div className="experience-badge">
+                <div className="exp-number gradient-text">12+</div>
+                <div className="exp-text">Years of<br/>Expertise</div>
+            </div>
+
             <div className="about-intro-btns">
-              <Link to="/about" className="btn-secondary learn-more-btn">
-                 About Us <ArrowRight size={18} />
+              <Link to="/about" className="btn-primary creative-btn">
+                 Explore Our Story <ArrowRight size={18} />
               </Link>
             </div>
           </motion.div>
@@ -43,10 +53,57 @@ const Home = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="about-intro-img"
+            className="about-intro-img creative-img-wrapper"
           >
-            <div className="img-frame glass-card">
-              <img src="/images/rug.png" alt="Flooring showcase" />
+            <div className="img-frame creative-frame-v2">
+              <img src="/images/rug.png" alt="Flooring showcase" className="main-img" />
+              
+              {/* Bulletproof Inline-Styled Card to defeat browser caching */}
+              <div style={{
+                position: 'absolute',
+                bottom: '-25px',
+                left: '-25px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px',
+                padding: '16px 24px',
+                borderRadius: '16px',
+                backgroundColor: '#ffffff',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
+                zIndex: 99999,
+                border: '1px solid rgba(0,0,0,0.05)',
+                width: 'fit-content'
+              }}>
+                 <div style={{
+                   width: '45px',
+                   height: '45px',
+                   backgroundColor: 'rgba(128, 74, 138, 0.15)',
+                   borderRadius: '50%',
+                   display: 'flex',
+                   alignItems: 'center',
+                   justifyContent: 'center',
+                   flexShrink: 0
+                 }}>
+                    <ShoppingBag size={20} color="#3A0353" />
+                 </div>
+                 <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <h4 style={{ margin: '0 0 4px 0', color: '#1a0126', fontSize: '1.1rem', fontWeight: 700 }}>Premium Quality</h4>
+                    <p style={{ margin: 0, color: 'gray', fontSize: '0.9rem' }}>Guaranteed Materials</p>
+                 </div>
+              </div>
+
+              {/* Bulletproof Solid Border inline */}
+              <div style={{
+                position: 'absolute',
+                top: '20px',
+                left: '-20px',
+                width: '100%',
+                height: '100%',
+                border: '5px solid #3A0353',
+                borderRadius: '30px',
+                zIndex: -1,
+                pointerEvents: 'none'
+              }}></div>
             </div>
           </motion.div>
         </div>
