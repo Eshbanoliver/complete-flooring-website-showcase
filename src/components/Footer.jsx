@@ -33,35 +33,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-products-contact">
-            <h3>Our Products & Contact</h3>
-            <div className="products-contact-content">
-              <div className="footer-services">
-                <ul>
-                  <li><Link to="/services"><ChevronRight size={16} /> Wooden Laminates</Link></li>
-                  <li><Link to="/services"><ChevronRight size={16} /> Wall to Wall Carpets</Link></li>
-                  <li><Link to="/services"><ChevronRight size={16} /> Artificial Grass</Link></li>
-                  <li><Link to="/services"><ChevronRight size={16} /> Area Rugs</Link></li>
-                  <li><Link to="/services"><ChevronRight size={16} /> Louver Panels</Link></li>
-                </ul>
-              </div>
-              <div className="footer-contact">
-                <ul className="contact-list">
-                  <li>
-                    <MapPin size={20} className="contact-icon" />
-                    <span>Floor No.: B-67, Kirti Nagar, Tonk Road, Jaipur</span>
-                  </li>
-                  <li>
-                    <Phone size={20} className="contact-icon" />
-                    <a href="tel:+919462670966">+91 9462670966</a>
-                  </li>
-                  <li>
-                    <Mail size={20} className="contact-icon" />
-                    <a href="mailto:completeflooringcompany@gmail.com">completeflooringcompany@gmail.com</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="footer-contact">
+            <h3>Contact Info</h3>
+            <ul className="contact-list">
+              <li>
+                <MapPin size={20} className="contact-icon" />
+                <span>Floor No.: B-67, Kirti Nagar, Tonk Road, Jaipur</span>
+              </li>
+              <li>
+                <Phone size={20} className="contact-icon" />
+                <a href="tel:+919462670966">+91 9462670966</a>
+              </li>
+              <li>
+                <Mail size={20} className="contact-icon" />
+                <a href="mailto:completeflooringcompany@gmail.com">completeflooringcompany@gmail.com</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
