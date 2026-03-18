@@ -14,12 +14,19 @@ const HomeCTA = () => {
             viewport={{ once: true }}
             className="cta-card glass-card"
         >
+          {/* Floating Particles */}
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          
           <div className="cta-content">
             <h2 className="title">Ready to Transform Your <span className="gradient-text">Floors</span>?</h2>
             <p className="desc">Get in touch with us today for a free consultation and quote. Experience the best flooring services in Jaipur.</p>
             
             <div className="cta-actions">
-              <a href="tel:+919462670966" className="btn-primary cta-btn">
+              <a href="tel:+919462670966" className="btn-primary cta-btn primary">
                 <Phone size={18} /> Call us Now
               </a>
               <a href="https://wa.me/919462670966" target="_blank" rel="noopener noreferrer" className="btn-secondary cta-btn whatsapp-cta">
