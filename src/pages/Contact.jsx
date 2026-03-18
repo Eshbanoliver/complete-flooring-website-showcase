@@ -77,7 +77,7 @@ const Contact = () => {
                <h3>Follow Us</h3>
                <div className="social-links-row">
                  <a href="#" className="social-link"><Facebook size={24} /></a>
-                 <a href="#" className="social-link"><Instagram size={24} /></a>
+                 <a href="https://www.instagram.com/completeflooringcompany/" target="_blank" rel="noopener noreferrer" className="social-link"><Instagram size={24} /></a>
                </div>
             </div>
           </motion.div>
@@ -143,13 +143,8 @@ const Contact = () => {
 
       <section className="map-section section-padding">
         <div className="container">
-          <div className="map-placeholder glass-card">
-            {/* Map section placeholder iframe blank as requested */}
-            <div className="map-dummy-content">
-              <MapPin size={48} className="gradient-text" />
-              <h2 className="gradient-text">Jaipur, Rajasthan</h2>
-              <p>Find us at Kirti Nagar, Tonk Road</p>
-            </div>
+          <div className="map-placeholder glass-card p-0" style={{ padding: 0, height: '400px', overflow: 'hidden' }}>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56946.62249755539!2d75.71356824863281!3d26.866533100000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5003ebf79df%3A0x1c20d968900855af!2sCOMPLETE%20FLOORING%20COMPANY!5e0!3m2!1sen!2sin!4v1773825030085!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0, borderRadius: '16px' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>

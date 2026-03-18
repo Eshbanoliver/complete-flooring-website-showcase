@@ -11,12 +11,14 @@ const Footer = () => {
       <div className="footer-top section-padding">
         <div className="container footer-grid">
           <div className="footer-info">
-            <h2 className="footer-logo">Complete <span className="gradient-text">Flooring</span></h2>
+            <Link to="/" className="footer-logo" style={{ display: 'inline-block', marginBottom: '1.5rem' }}>
+              <img src="/images/logo.jpg" alt="Complete Flooring Company" style={{ height: '55px', width: 'auto' }} />
+            </Link>
             <p className="footer-desc">Premium flooring solutions for your dream spaces. We provide high-quality flooring services across Jaipur and beyond.</p>
             <div className="social-links">
               {/* Links are blank as requested */}
               <a href="#" className="social-icon"><Facebook /></a>
-              <a href="#" className="social-icon"><Instagram /></a>
+              <a href="https://www.instagram.com/completeflooringcompany/" target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram /></a>
             </div>
           </div>
 

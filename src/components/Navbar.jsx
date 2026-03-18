@@ -27,8 +27,8 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          Complete <span className="gradient-text">Flooring</span>
+        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/images/logo.jpg" alt="Complete Flooring Company" style={{ height: '45px', width: 'auto' }} />
         </Link>
 
         {/* Desktop Links */}
