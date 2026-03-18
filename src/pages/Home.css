@@ -141,7 +141,7 @@
   background: #ffffff !important;
   box-shadow: 0 15px 45px rgba(26, 1, 38, 0.15) !important;
   animation: float 4s ease-in-out infinite;
-  z-index: 9999 !important;
+  z-index: 100 !important;
   border: 1px solid rgba(26, 1, 38, 0.1) !important;
   width: max-content !important;
 }

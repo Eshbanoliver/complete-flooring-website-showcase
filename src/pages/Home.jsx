@@ -70,7 +70,7 @@ const Home = () => {
                 borderRadius: '16px',
                 backgroundColor: '#ffffff',
                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
-                zIndex: 99999,
+                zIndex: 100,
                 border: '1px solid rgba(0,0,0,0.05)',
                 width: 'fit-content'
               }}>
