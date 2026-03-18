@@ -9,44 +9,121 @@
   width: 100%;
 }
 
-.metric-card {
+.metric-card-v2 {
   text-align: center;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  padding: 3rem 1.5rem;
+  border-radius: 24px;
+  background: 
+    linear-gradient(135deg, #6B46C1 0%, #9333EA 50%, #A855F7 100%),
+    linear-gradient(45deg, #7C3AED 0%, #8B5CF6 50%, #A78BFA 100%),
+    linear-gradient(-45deg, #6D28D9 0%, #7C3AED 50%, #8B5CF6 100%);
+  background-size: 200% 200%, 150% 150%, 100% 100%;
+  background-position: 0% 0%, 100% 100%, 50% 50%;
+  background-blend-mode: multiply, overlay, normal;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(107, 70, 193, 0.25),
+    0 10px 20px rgba(147, 51, 234, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.metric-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--secondary);
+.metric-card-v2::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+  transform: scale(0.8) rotate(0deg);
+  opacity: 0;
+  animation: floatPattern 6s ease-in-out infinite;
+}
+
+@keyframes floatPattern {
+  0%, 100% { transform: scale(0.8) rotate(0deg); }
+  50% { transform: scale(1) rotate(180deg); }
+}
+
+.metric-card-v2:hover {
+  transform: translateY(-12px) scale(1.02);
+  background-position: 50% 50%, 0% 0%, 100% 100%;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 30px 60px rgba(107, 70, 193, 0.35),
+    0 15px 30px rgba(147, 51, 234, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.metric-card-v2:hover::before {
+  transform: scale(1.2) rotate(90deg);
+  opacity: 1;
 }
 
 .metric-icon {
   width: 60px;
   height: 60px;
-  background: rgba(248, 210, 153, 0.1);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--secondary);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-.metric-card h2 {
+.metric-card-v2 h2 {
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
+  position: relative;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 800;
 }
 
-.metric-card p {
-  color: var(--text-dim);
-  font-weight: 500;
+.metric-card-v2 p {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
   font-size: 1.1rem;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card-v2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.1) 35px, rgba(255, 255, 255, 0.1) 70px),
+    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.05) 35px, rgba(255, 255, 255, 0.05) 70px);
+  background-size: 100% 100%, 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
-  .metric-card h2 {
+  .metric-card-v2 h2 {
     font-size: 2rem;
   }
 }

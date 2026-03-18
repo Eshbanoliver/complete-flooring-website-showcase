@@ -21,7 +21,7 @@ const KeyMetrics = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             viewport={{ once: true }}
-            className="metric-card glass-card"
+            className="metric-card-v2"
           >
             <div className="metric-icon">{metric.icon}</div>
             <h2 className="gradient-text">{metric.value}</h2>
