@@ -23,9 +23,27 @@ const WhyChooseUs = () => {
             viewport={{ once: true }}
             className="why-us-content"
         >
-          <h5 className="gradient-text subtitle">Better for your home</h5>
-          <h2 className="title">Why Choose <span className="gradient-text">Complete Flooring</span>?</h2>
-          <p className="desc">With over a decade of excellence in the furniture and flooring industry, we bring a level of expertise and quality control that is unmatched in the market.</p>
+          <motion.h5 
+            className="gradient-text subtitle"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >Better for your home</motion.h5>
+          <motion.h2 
+            className="title"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+          >Why Choose <span className="gradient-text">Complete Flooring</span>?</motion.h2>
+          <motion.p 
+            className="desc"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            viewport={{ once: true }}
+          >With over a decade of excellence in the furniture and flooring industry, we bring a level of expertise and quality control that is unmatched in the market.</motion.p>
           
           <ul className="reasons-list">
             {reasons.map((r, i) => (
@@ -33,8 +51,12 @@ const WhyChooseUs = () => {
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
+                transition={{ delay: 0.8 + i * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
+                whileHover={{ 
+                  x: 10,
+                  transition: { duration: 0.3 }
+                }}
               >
                 <div className="check-icon">{r.icon}</div>
                 <span>{r.text}</span>
