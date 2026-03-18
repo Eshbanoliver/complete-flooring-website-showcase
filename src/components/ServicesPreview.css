@@ -1,5 +1,5 @@
 .services-preview-section {
-  background: #110118;
+  background: var(--bg-dark);
 }
 
 .section-header {
@@ -18,7 +18,7 @@
 
 .section-header .title {
   font-size: clamp(2.5rem, 6vw, 3.5rem);
-  color: white;
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 

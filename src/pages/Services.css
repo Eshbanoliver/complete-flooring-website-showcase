@@ -62,7 +62,7 @@
 
 .product-features li {
   font-size: 0.95rem;
-  color: #fff;
+  color: var(--text);
   display: flex;
   align-items: center;
   gap: 0.5rem;

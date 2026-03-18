@@ -1,5 +1,5 @@
 .core-values-section {
-  background: #110118;
+  background: var(--bg-dark);
 }
 
 .core-values-grid {
@@ -27,19 +27,13 @@
 
 .value-icon svg {
   width: 50px;
-  height: 500px; /* Mistake here, will fix to 50px */
-}
-
-/* Correcting it in the draft */
-.value-icon svg {
-  width: 50px;
   height: 50px;
 }
 
 .value-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: white;
+  color: var(--text);
 }
 
 .value-card p {

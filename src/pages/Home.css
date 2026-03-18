@@ -23,7 +23,7 @@
 
 .about-intro-text .title {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  color: white;
+  color: var(--text);
   margin-bottom: 2rem;
   line-height: 1.2;
 }

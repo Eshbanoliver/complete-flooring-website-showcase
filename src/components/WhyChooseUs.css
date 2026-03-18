@@ -19,7 +19,7 @@
 
 .why-us-content .title {
   font-size: clamp(2.5rem, 6vw, 3.5rem);
-  color: white;
+  color: var(--text);
   margin-bottom: 2.5rem;
 }
 
@@ -40,7 +40,7 @@
   align-items: center;
   gap: 1.5rem;
   font-size: 1.15rem;
-  color: #fff;
+  color: var(--text);
 }
 
 .check-icon {

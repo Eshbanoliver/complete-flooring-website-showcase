@@ -26,7 +26,7 @@
 
 .cta-card .title {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: white;
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 

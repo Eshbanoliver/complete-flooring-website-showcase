@@ -39,7 +39,7 @@
 
 .quote {
   font-size: 1.15rem;
-  color: #fff;
+  color: var(--text);
   font-style: italic;
   font-weight: 500;
   line-height: 1.7;

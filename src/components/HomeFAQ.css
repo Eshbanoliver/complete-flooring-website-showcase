@@ -1,5 +1,5 @@
 .faq-section {
-  background: #110118;
+  background: var(--bg-dark);
 }
 
 .faq-list {
@@ -31,7 +31,7 @@
 
 .faq-question h3 {
   font-size: 1.3rem;
-  color: white;
+  color: var(--text);
   font-weight: 600;
 }
 
