@@ -217,17 +217,21 @@
 
 .experience-badge {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
+  bottom: -30px;
+  right: -30px;
   padding: 1.5rem 2rem;
   text-align: center;
-  border-radius: 18px;
+  border-radius: 24px;
   min-width: 180px;
   background: linear-gradient(135deg, #6B46C1, #9333EA);
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 15px 35px rgba(107, 70, 193, 0.3);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation: pulse 3s ease-in-out infinite;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 45px rgba(107, 70, 193, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: pulse 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -351,19 +355,26 @@
     position: relative;
     bottom: auto;
     right: auto;
-    margin-top: 2rem;
-    padding: 1.2rem 1.8rem;
-    font-size: 0.8rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 2rem auto 0;
+    padding: 1.2rem 2rem;
+    min-width: unset;
+    width: max-content;
+    max-width: 90%;
+    flex-direction: row;
+    gap: 1.5rem;
+    left: 0;
+    transform: none;
+    border-radius: 20px;
   }
   
   .experience-badge h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 0;
   }
   
   .experience-badge p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    text-align: left;
   }
 }
 
@@ -416,11 +427,12 @@
   
   .experience-badge {
     padding: 1rem 1.5rem;
+    gap: 1rem;
     margin-top: 1.5rem;
   }
   
   .experience-badge h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .experience-badge p {
