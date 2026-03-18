@@ -29,7 +29,7 @@
 
 .services-preview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
   margin-bottom: 4rem;
 }
@@ -95,7 +95,19 @@
 }
 
 @media (max-width: 768px) {
+  .services-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
   .card-img-wrapper {
     height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
