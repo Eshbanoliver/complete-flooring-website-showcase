@@ -7,6 +7,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   perspective: 1000px;
+  padding: 0 1rem;
 }
 
 @media (min-width: 1200px) {
@@ -18,6 +19,19 @@
 @media (min-width: 768px) and (max-width: 1199px) {
   .core-values-grid {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .core-values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .value-card {
+    padding: 2rem 1.5rem;
   }
 }
 

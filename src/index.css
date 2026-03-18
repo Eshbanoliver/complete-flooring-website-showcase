@@ -138,6 +138,12 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: var(--spacing-lg) 5%;
+    padding: var(--spacing-lg) 4%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-padding {
+    padding: var(--spacing-md) 3%;
   }
 }

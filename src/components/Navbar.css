@@ -104,16 +104,20 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
-  max-width: 350px;
+  width: 85%;
+  max-width: 400px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 6rem 2rem 2rem;
-  transition: right 0.4s ease-in-out;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
-  z-index: 999;
+  background: linear-gradient(135deg, rgba(26, 1, 38, 0.98), rgba(58, 3, 83, 0.95));
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 7rem 2.5rem 2rem;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: -15px 0 40px rgba(0, 0, 0, 0.4);
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-left: 1px solid rgba(248, 210, 153, 0.2);
 }
 
 .mobile-menu.open {
@@ -123,28 +127,43 @@
 .mobile-links {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .mobile-link {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--text-dim);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding-left: 0;
+  border-left: 0 solid var(--secondary);
 }
 
-.mobile-link.active {
+.mobile-link:hover, .mobile-link.active {
   color: var(--secondary);
+  padding-left: 1rem;
+  border-left-width: 4px;
 }
 
 .mobile-cta-btn {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: var(--secondary);
+  margin-top: auto;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
   color: var(--primary);
   text-align: center;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 1.1rem;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(248, 210, 153, 0.3);
+  transition: all 0.3s ease;
+}
+
+.mobile-cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(248, 210, 153, 0.4);
 }
 
 /* Desktop Styles */
