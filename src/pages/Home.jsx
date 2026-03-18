@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import KeyMetrics from '../components/KeyMetrics';
@@ -9,10 +9,58 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import HomeFAQ from '../components/HomeFAQ';
 import HomeCTA from '../components/HomeCTA';
 import { Link } from 'react-router-dom';
-import { ShoppingBag, ArrowRight } from 'lucide-react';
+import { ShoppingBag, ArrowRight, User, Star } from 'lucide-react';
 import './Home.css';
 
 const Home = () => {
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  
+  const testimonials = [
+    {
+      quote: "Exceptional quality and service. Our living room looks absolutely stunning with the new wooden flooring. Highly recommend Complete Flooring!",
+      name: "Mr. Rajesh Sharma",
+      role: "Interior Designer, Jaipur",
+      rating: 5
+    },
+    {
+      quote: "The artificial grass installation on our balcony was flawless. It has completely transformed the vibe of our home. Fast and professional service.",
+      name: "Mrs. Ananya Mehta",
+      role: "Homeowner, Vaishali Nagar",
+      rating: 5
+    },
+    {
+      quote: "Complete Flooring exceeded our expectations with their premium carpet collection. The installation was quick and the quality is outstanding!",
+      name: "Mr. Vikram Singh",
+      role: "Business Owner, Malviya Nagar",
+      rating: 5
+    },
+    {
+      quote: "Professional team, excellent craftsmanship, and amazing attention to detail. Our new floors have completely elevated our office space.",
+      name: "Ms. Priya Patel",
+      role: "Architect, Civil Lines",
+      rating: 5
+    },
+    {
+      quote: "The wall-to-wall carpet installation was perfect. Great products, competitive pricing, and exceptional customer service throughout.",
+      name: "Dr. Amit Kumar",
+      role: "Homeowner, Mansarovar",
+      rating: 5
+    },
+    {
+      quote: "Innovative flooring solutions and expert guidance. They helped us choose the perfect flooring that matches our home's aesthetic beautifully.",
+      name: "Mrs. Kavita Reddy",
+      role: "Interior Designer, Raja Park",
+      rating: 5
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -131,36 +179,50 @@ const Home = () => {
             <h5 className="gradient-text subtitle">Testimonials</h5>
             <h2 className="title">What Our <span className="gradient-text">Clients</span> Say</h2>
           </div>
-          <div className="testimonials-grid">
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="testimonial-card glass-card"
-            >
-              <p>"Exceptional quality and service. Our living room looks совершенно wonderful with the new wooden flooring. Highly recommend Complete Flooring!"</p>
-              <div className="client-info">
-                <h4>Mr. Rajesh Sharma</h4>
-                <p>Interior Designer, Jaipur</p>
-              </div>
-            </motion.div>
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="testimonial-card glass-card"
-            >
-              <p>"The artificial grass installation on our balcony was flawless. It has completely changed the vibe of our home. Fast and professional."</p>
-              <div className="client-info">
-                <h4>Mrs. Ananya Mehta</h4>
-                <p>Homeowner, Vaishali Nagar</p>
-              </div>
-            </motion.div>
+          <div className="testimonials-slider">
+            <div className="testimonial-track">
+              {testimonials.map((testimonial, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ 
+                    opacity: index === currentTestimonialIndex ? 1 : 0,
+                    x: index === currentTestimonialIndex ? 0 : 100,
+                    scale: index === currentTestimonialIndex ? 1 : 0.8
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className={`testimonial-card glass-card ${index === currentTestimonialIndex ? 'active' : ''}`}
+                >
+                  <div className="testimonial-header">
+                    <div className="user-avatar">
+                      <User size={24} />
+                    </div>
+                    <div className="rating">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} size={16} className="star-filled" />
+                      ))}
+                    </div>
+                  </div>
+                  <p>"{testimonial.quote}"</p>
+                  <div className="client-info">
+                    <h4>{testimonial.name}</h4>
+                    <p>{testimonial.role}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <div className="testimonial-dots">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  className={`dot ${index === currentTestimonialIndex ? 'active' : ''}`}
+                  onClick={() => setCurrentTestimonialIndex(index)}
+                />
+              ))}
+            </div>
           </div>
           <div className="testimonials-bottom">
-            <Link to="/testimonials" className="btn-secondary">Read All Testimonials</Link>
+            <Link to="/testimonials" className="btn-primary">Read All Testimonials</Link>
           </div>
         </div>
       </section>

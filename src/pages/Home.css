@@ -191,6 +191,211 @@
     bottom: -15px;
     right: 10px;
   }
+  
+  .testimonials-slider {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .testimonial-track {
+    height: 400px;
+  }
+  
+  .testimonial-card {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    max-width: none;
+  }
+  
+  .testimonial-header {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+  
+  .testimonial-dots {
+    margin-top: 1.5rem;
+  }
+}
+
+.testimonials-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.testimonial-track {
+  position: relative;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.testimonial-card {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding: 3rem;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    0 20px 40px rgba(107, 70, 193, 0.15),
+    0 10px 20px rgba(147, 51, 234, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  margin: 0 auto;
+  display: none;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #6B46C1, #9333EA, #A855F7);
+  border-radius: 18px;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: subtract;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: subtract;
+  z-index: -1;
+}
+
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(107, 70, 193, 0.05) 0%, transparent 70%);
+  animation: floatPattern 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes floatPattern {
+  0%, 100% { transform: scale(0.8) rotate(0deg); }
+  50% { transform: scale(1) rotate(180deg); }
+}
+
+.testimonial-card.active:hover {
+  transform: scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(107, 70, 193, 0.25),
+    0 15px 30px rgba(147, 51, 234, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6B46C1, #9333EA);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 
+    0 8px 25px rgba(107, 70, 193, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.user-avatar::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%) translateY(-100%); }
+  50% { transform: translateX(100%) translateY(100%); }
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star-filled {
+  color: #F8D299;
+  fill: #F8D299;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.testimonial-card p::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--secondary);
+  opacity: 0.2;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #6B46C1;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #6B46C1;
+  transform: scale(1.2);
 }
 
 .testimonials-grid {
@@ -233,6 +438,7 @@
 
 .testimonials-bottom {
   text-align: center;
+  margin-top: 3rem;
 }
 
 @media (max-width: 768px) {
