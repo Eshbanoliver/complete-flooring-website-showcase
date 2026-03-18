@@ -9,6 +9,8 @@ const CoreValues = () => {
     { title: 'Quality', icon: <Star />, desc: 'Superior materials that stand the test of time.' },
     { title: 'Innovation', icon: <Zap />, desc: 'Modern designs and advanced installation techniques.' },
     { title: 'Passion', icon: <Heart />, desc: 'Dedicated to bringing your floor visions to life.' },
+    { title: 'Excellence', icon: <Layout />, desc: 'Setting the highest standards in flooring craftsmanship.' },
+    { title: 'Reliability', icon: <RefreshCw />, desc: 'Consistent service and timely project delivery.' },
   ];
 
   return (
@@ -23,10 +25,21 @@ const CoreValues = () => {
           {values.map((v, i) => (
             <motion.div 
                key={v.title}
-               initial={{ opacity: 0, scale: 0.9 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-               transition={{ delay: i * 0.1, duration: 0.5 }}
-               viewport={{ once: true }}
+               initial={{ opacity: 0, y: 50, rotateX: -15 }}
+               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+               transition={{ 
+                 delay: i * 0.15, 
+                 duration: 0.8,
+                 type: "spring",
+                 stiffness: 100,
+                 damping: 20
+               }}
+               viewport={{ once: true, margin: "-100px" }}
+               whileHover={{ 
+                 y: -20,
+                 scale: 1.02,
+                 transition: { duration: 0.3 }
+               }}
                className="value-card glass-card"
             >
               <div className="value-icon">{v.icon}</div>
