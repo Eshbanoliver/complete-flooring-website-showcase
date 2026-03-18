@@ -1,0 +1,125 @@
+:root {
+  /* Color Palette */
+  --primary: #3A0353;
+  --primary-light: #804A8A;
+  --secondary: #F8D299;
+  --accent: #F59E51;
+  --text: #F8D299;
+  --text-dim: rgba(248, 210, 153, 0.7);
+  --bg-dark: #1a0126;
+  --glass: rgba(58, 3, 83, 0.2);
+  --glass-border: rgba(248, 210, 153, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  padding: var(--spacing-md);
+}
+
+.section-padding {
+  padding: var(--spacing-xl) 5%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(245, 158, 81, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: var(--fw-medium);
+}
+
+.btn-secondary:hover {
+  background: rgba(248, 210, 153, 0.1);
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: var(--spacing-lg) 5%;
+  }
+}

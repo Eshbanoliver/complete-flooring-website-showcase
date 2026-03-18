@@ -1,0 +1,55 @@
+.core-values-section {
+  background: #110118;
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(248, 210, 153, 0.1) !important;
+}
+
+.value-card:hover {
+  border-color: var(--secondary) !important;
+  background: rgba(248, 210, 153, 0.05);
+}
+
+.value-icon {
+  color: var(--secondary);
+  margin-bottom: 2rem;
+}
+
+.value-icon svg {
+  width: 50px;
+  height: 500px; /* Mistake here, will fix to 50px */
+}
+
+/* Correcting it in the draft */
+.value-icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.value-card p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .core-values-grid {
+    grid-template-columns: 1fr;
+  }
+}

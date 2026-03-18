@@ -1,0 +1,119 @@
+.footer {
+  background: #110118;
+  color: #fff;
+}
+
+.footer-top {
+  border-bottom: 1px solid rgba(248, 210, 153, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.footer-desc {
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer-links h3, .footer-services h3, .footer-contact h3 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.footer-links ul li, .footer-services ul li {
+  margin-bottom: 1rem;
+}
+
+.footer-links ul li a, .footer-services ul li a {
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover, .footer-services ul li a:hover {
+  color: var(--secondary);
+  padding-left: 8px;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+  color: var(--text-dim);
+}
+
+.contact-icon {
+  color: var(--secondary);
+}
+
+.contact-list a:hover {
+  color: var(--secondary);
+}
+
+.footer-bottom {
+  padding: 2rem 5%;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+}
+
+.footer-bottom-content {
+  border-top: 1px solid rgba(248, 210, 153, 0.1);
+  padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .contact-list li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-links ul li a, .footer-services ul li a {
+    justify-content: center;
+  }
+}

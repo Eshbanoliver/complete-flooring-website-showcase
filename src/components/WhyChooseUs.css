@@ -1,0 +1,98 @@
+.why-us-section {
+  background: var(--bg-dark);
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 5rem;
+  align-items: center;
+}
+
+.why-us-content .subtitle {
+  font-size: 1.1rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.why-us-content .title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: white;
+  margin-bottom: 2.5rem;
+}
+
+.why-us-content .desc {
+  color: var(--text-dim);
+  font-size: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.reasons-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.reasons-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.check-icon {
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-us-image {
+  position: relative;
+}
+
+.image-stack {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 30px;
+}
+
+.image-stack img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 20px 20px 0px rgba(248, 210, 153, 0.05);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 25px;
+  min-width: 180px;
+  border: 1px solid var(--secondary) !important;
+}
+
+.experience-badge h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-badge p {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+  .experience-badge {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 3rem;
+  }
+}

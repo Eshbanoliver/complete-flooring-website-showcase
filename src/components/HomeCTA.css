@@ -1,0 +1,62 @@
+.cta-section {
+  background: var(--bg-dark);
+}
+
+.cta-card {
+  padding: 5rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.cta-card .title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.cta-card .desc {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1.25rem;
+  color: var(--text-dim);
+}
+
+.cta-actions {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 1.2rem 2.8rem;
+  font-size: 1.15rem;
+}
+
+.whatsapp-cta:hover {
+  background: #25D366;
+  color: #fff;
+  border-color: #25D366;
+}
+
+@media (max-width: 576px) {
+  .cta-card {
+    padding: 3rem 1.5rem;
+  }
+}
