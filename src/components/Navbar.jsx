@@ -30,9 +30,9 @@ const Navbar = () => {
       <div className="top-bar">
         <div className="top-bar-container">
           <div className="top-bar-left">
-            <a href="mailto:Hello@Email.co" className="top-info">
+            <a href="mailto:completeflooringcompany@gmail.com" className="top-info">
               <Mail size={16} />
-              <span>Hello@Email.co</span>
+              <span>completeflooringcompany@gmail.com</span>
             </a>
             <a href="tel:+919462670966" className="top-info">
               <Phone size={16} />

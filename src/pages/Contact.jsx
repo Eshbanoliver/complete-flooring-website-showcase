@@ -76,7 +76,6 @@ const Contact = () => {
             <div className="contact-socials glass-card">
                <h3>Follow Us</h3>
                <div className="social-links-row">
-                 <a href="#" className="social-link"><Facebook size={24} /></a>
                  <a href="https://www.instagram.com/completeflooringcompany/" target="_blank" rel="noopener noreferrer" className="social-link"><Instagram size={24} /></a>
                </div>
             </div>
