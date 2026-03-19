@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import MissionVision from '../components/MissionVision';
 import CoreValues from '../components/CoreValues';
 import WhyChooseUs from '../components/WhyChooseUs';
@@ -32,9 +34,11 @@ const About = () => {
             viewport={{ once: true }}
             className="about-image"
           >
+            <div className="decorative-shape-tl"></div>
             <div className="glass-card img-frame">
-              <img src="/images/carpet.png" alt="Flooring details" />
+              <img src="/images/about-showcase.jpg" alt="Indoor Artificial Grass showcase" className="main-img" />
             </div>
+            <div className="decorative-shape-br"></div>
           </motion.div>
           
           <motion.div 
@@ -46,7 +50,11 @@ const About = () => {
           >
             <h2 className="title">Jaipur's Trusted Flooring <span className="gradient-text">Partner</span> Since 2012</h2>
             <p className="desc">Established with a vision to revolutionize the flooring industry in Jaipur, Complete Flooring Company has grown from a small family business to a respected regional leader in premium flooring solutions. We understand that a floor is the foundation of any room's design and functionality.</p>
-            <p className="desc">Our team combines deep technical knowledge with an artistic eye for interior design, ensuring that every piece of laminate, carpet, or artificial grass is perfectly chosen and expertly installed. We pride ourselves on our meticulous attention to detail and our unwavering commitment to customer satisfaction.</p>
+            <p className="desc">Our team combines deep technical knowledge with an artistic eye for interior design, ensuring that every piece of laminate, carpet, or artificial grass is perfectly chosen and expertly installed.</p>
+            
+            <Link to="/services" className="btn-primary" style={{ marginTop: '1.5rem' }}>
+              Explore Our Services <ArrowRight size={18} />
+            </Link>
           </motion.div>
         </div>
       </section>
