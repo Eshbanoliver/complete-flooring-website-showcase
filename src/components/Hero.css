@@ -43,8 +43,8 @@
 }
 
 .hero-subtitle {
-  color: var(--theme-purple);
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(5px);
   padding: 0.5rem 1rem;
   border-radius: 30px;
