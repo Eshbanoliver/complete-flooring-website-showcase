@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import MissionVision from '../components/MissionVision';
 import CoreValues from '../components/CoreValues';
 import WhyChooseUs from '../components/WhyChooseUs';
+import HomeCTA from '../components/HomeCTA';
 import './About.css';
 
 const About = () => {
@@ -30,14 +31,25 @@ const About = () => {
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            animate={{ 
+              y: [0, -15, 0],
+            }}
+            transition={{ 
+              duration: 4, 
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
             viewport={{ once: true }}
             className="about-image"
           >
             <div className="decorative-shape-tl"></div>
-            <div className="glass-card img-frame">
+            <motion.div 
+              whileHover={{ scale: 1.02, rotate: 1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="glass-card img-frame"
+            >
               <img src="/images/about-showcase.jpg" alt="Indoor Artificial Grass showcase" className="main-img" />
-            </div>
+            </motion.div>
             <div className="decorative-shape-br"></div>
           </motion.div>
           
@@ -62,6 +74,7 @@ const About = () => {
       <MissionVision />
       <CoreValues />
       <WhyChooseUs />
+      <HomeCTA />
     </div>
   );
 };

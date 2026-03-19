@@ -66,6 +66,7 @@
   border-radius: 20px;
   transform: rotate(-15deg);
   z-index: 1;
+  animation: float-shape 6s infinite ease-in-out;
 }
 
 .decorative-shape-br {
@@ -78,6 +79,12 @@
   opacity: 0.15;
   border-radius: 50%;
   z-index: 1;
+  animation: float-shape 8s infinite ease-in-out alternate;
+}
+
+@keyframes float-shape {
+  0%, 100% { transform: translateY(0) rotate(-15deg); }
+  50% { transform: translateY(-10px) rotate(-10deg); }
 }
 
 .about-content .title {
