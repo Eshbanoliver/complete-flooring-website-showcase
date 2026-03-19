@@ -7,36 +7,42 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 2.5rem;
+  padding: 3rem;
 }
 
 .left-floating, .right-floating {
   pointer-events: all;
+  display: flex;
+  flex-direction: column;
 }
 
 .float-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 55px;
-  height: 55px;
+  width: 65px; /* Increased size */
+  height: 65px; /* Increased size */
   border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-bottom: 1rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 1.2rem;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .float-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
 }
 
 .whatsapp-btn {
-  background: #25D366;
+  background: linear-gradient(135deg, #25D366 0%, #1ebd5e 100%);
   color: white;
 }
 
 .call-btn {
-  background: #007bff;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
 }
 
@@ -49,7 +55,7 @@
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .right-floating.visible {
@@ -58,12 +64,22 @@
   pointer-events: all;
 }
 
+.float-btn svg {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
 @media (max-width: 768px) {
   .floating-container {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   .float-btn {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
+  }
+  .float-btn svg {
+    width: 24px;
+    height: 24px;
   }
 }
