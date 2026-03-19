@@ -104,7 +104,7 @@ const Home = () => {
             className="about-intro-img creative-img-wrapper"
           >
             <div className="img-frame creative-frame-v2">
-              <img src="/images/rug.png" alt="Flooring showcase" className="main-img" />
+              <img src="/images/who-we-are.jpg" alt="Staircase Carpeting Showcase" className="main-img" />
               
               {/* Bulletproof Inline-Styled Card to defeat browser caching */}
               <div style={{
