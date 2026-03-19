@@ -25,7 +25,7 @@ const Footer = () => {
             <ul>
               <li><Link to="/"><ChevronRight size={16} /> Home</Link></li>
               <li><Link to="/about"><ChevronRight size={16} /> About Us</Link></li>
-              <li><Link to="/services"><ChevronRight size={16} /> Services</Link></li>
+              <li><Link to="/services"><ChevronRight size={16} /> Products</Link></li>
               <li><Link to="/testimonials"><ChevronRight size={16} /> Testimonials</Link></li>
               <li><Link to="/contact"><ChevronRight size={16} /> Contact Us</Link></li>
             </ul>

@@ -119,12 +119,13 @@ h1, h2, h3, h4 {
 }
 
 .hero-subpage {
-  padding-top: 15rem;
-  padding-bottom: 8rem;
-  background: linear-gradient(rgba(26, 1, 38, 0.75), rgba(26, 1, 38, 0.55)), url('/images/page-hero.jpg') center/cover no-repeat;
+  padding-top: 18rem;
+  padding-bottom: 10rem;
+  background: linear-gradient(rgba(26, 1, 38, 0.45), rgba(26, 1, 38, 0.25)), url('/images/page-hero.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 500px;
 }
 
 .hero-subpage .hero-text {

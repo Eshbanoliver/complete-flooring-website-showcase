@@ -65,7 +65,7 @@ const About = () => {
             <p className="desc">Our team combines deep technical knowledge with an artistic eye for interior design, ensuring that every piece of laminate, carpet, or artificial grass is perfectly chosen and expertly installed.</p>
             
             <Link to="/services" className="btn-primary" style={{ marginTop: '1.5rem' }}>
-              Explore Our Services <ArrowRight size={18} />
+              Explore Our Products <ArrowRight size={18} />
             </Link>
           </motion.div>
         </div>
