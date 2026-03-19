@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, ShoppingBag } from 'lucide-react';
+import { Menu, X, Phone, Mail, Facebook, Twitter, Youtube, Instagram, Search } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -25,36 +25,62 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/images/logo.jpg" alt="Complete Flooring Company" style={{ height: '45px', width: 'auto' }} />
-        </Link>
-
-        {/* Desktop Links */}
-        <ul className="navbar-links">
-          {navLinks.map((link) => (
-            <li key={link.path}>
-              <Link 
-                to={link.path} 
-                className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <div className="navbar-actions">
-          <a href="tel:+919462670966" className="nav-cta">
-            <Phone size={18} />
-            <span>Call Us Now</span>
-          </a>
-          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+    <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
+      {/* Top Bar */}
+      <div className="top-bar">
+        <div className="top-bar-container">
+          <div className="top-bar-left">
+            <a href="mailto:Hello@Email.co" className="top-info">
+              <Mail size={16} />
+              <span>Hello@Email.co</span>
+            </a>
+            <a href="tel:+919462670966" className="top-info">
+              <Phone size={16} />
+              <span>(+91) 9462670966</span>
+            </a>
+          </div>
+          <div className="top-bar-right">
+            <div className="social-links">
+              <a href="#"><Facebook size={16} /></a>
+              <a href="#"><Twitter size={16} /></a>
+              <a href="#"><Youtube size={16} /></a>
+              <a href="#"><Instagram size={16} /></a>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Main Nav Container */}
+      <nav className="main-nav">
+        <div className="main-nav-container">
+          <Link to="/" className="navbar-logo">
+            <img src="/images/logo.jpg" alt="Complete Flooring Company" />
+          </Link>
+
+          {/* Desktop Links */}
+          <ul className="navbar-links">
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <Link 
+                  to={link.path} 
+                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="navbar-actions">
+            <a href="/contact" className="get-quote-btn">
+              Get a Quote
+            </a>
+            <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </nav>
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
@@ -70,12 +96,12 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <a href="tel:+919462670966" className="mobile-cta-btn">
-             Call Now: +91 9462670966
+          <a href="/contact" className="mobile-cta-btn">
+             Get a Quote
           </a>
         </ul>
       </div>
-    </nav>
+    </header>
   );
 };
 
