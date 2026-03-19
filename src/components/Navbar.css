@@ -18,8 +18,8 @@
 .top-bar {
   background-color: var(--theme-purple);
   color: #ffffff;
-  padding: 0.6rem 5%;
-  font-size: 0.85rem;
+  padding: 0.4rem 5%;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: all 0.4s ease;
 }
@@ -87,7 +87,7 @@
   max-width: 1400px;
   margin: 0 auto;
   background: var(--nav-white);
-  padding: 0.8rem 3rem; /* Reduced padding */
+  padding: 0.5rem 3rem; /* Further reduced padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,7 +95,7 @@
   border-bottom-right-radius: 60px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
-  min-height: 75px; /* Sleeker profile */
+  min-height: 65px; /* Sleeker profile */
 }
 
 .navbar-header.scrolled {
@@ -103,8 +103,8 @@
 }
 
 .navbar-header.scrolled .main-nav-container {
-  padding: 0.6rem 2.5rem;
-  min-height: 65px; /* More compact sticky state */
+  padding: 0.4rem 2.5rem;
+  min-height: 55px; /* Even more compact sticky state */
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -115,19 +115,19 @@
 }
 
 .navbar-logo img {
-  height: 65px; /* Re-balanced logo size */
+  height: 55px; /* Proportional logo size */
   width: auto;
   transition: all 0.4s ease;
   object-fit: contain;
   mix-blend-mode: multiply;
-  transform: scale(1.15); /* Subtle scale */
+  transform: scale(1.1); /* Subtle scale */
   transform-origin: left center;
   filter: contrast(1.1);
 }
 
 .navbar-header.scrolled .navbar-logo img {
-  height: 50px;
-  transform: scale(1.1);
+  height: 45px;
+  transform: scale(1.05);
 }
 
 .navbar-links {
