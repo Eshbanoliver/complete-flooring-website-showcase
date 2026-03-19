@@ -1,52 +1,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ShoppingBag } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import HomeCTA from '../components/HomeCTA';
 import './Services.css';
 
 const Services = () => {
   const products = [
     { 
-      title: 'Wooden Laminates Flooring', 
+      title: 'Wooden Laminates', 
       img: '/images/laminate.png', 
-      desc: 'Expertly crafted wooden laminates that offer a refined, timeless wood aesthetic with contemporary durability. Our laminates are resistant to scratches, moisture, and fading, making them perfect for high-traffic areas.',
-      features: ['Scratch Resistant', 'Moisture Proof', 'Easy Maintenance', 'Elegant Finish'],
+      desc: 'Durable and elegant wooden flooring for a classic, sophisticated look. Resistance to scratches and moisture.',
     },
     { 
       title: 'Wall to Wall Carpets', 
       img: '/images/carpet.png', 
-      desc: 'Sumptuous, high-density wall-to-wall carpeting designed for ultimate comfort and acoustic performance. Our carpet collection includes a vast range of textures, colors, and patterns suitable for both luxurious homes and corporate offices.',
-      features: ['Noise Reduction', 'Premium Comfort', 'Anti-static', 'Vibrant Colors'],
+      desc: 'Cozy and luxurious carpets for ultimate comfort and acoustic performance in homes and corporate offices.',
     },
     { 
       title: 'Commercial Carpets', 
       img: '/images/hero-office.jpg', 
-      desc: 'Highly durable and professional commercial carpet flooring designed to withstand heavy foot traffic. Perfect for corporate offices, hotels, and retail spaces seeking long-lasting performance and aesthetic appeal.',
-      features: ['High Durability', 'Heavy-Traffic Rated', 'Professional Look', 'Stain Resistant'],
+      desc: 'High-performance carpeting designed to withstand heavy foot traffic while maintaining a professional office vibe.',
     },
     { 
       title: 'Artificial Grass', 
       img: '/images/grass.png', 
-      desc: 'Lush, maintenance-free artificial turf that stays green all year round. Perfectly designed to transform rooftops, balconies, and indoor recreational areas into beautiful green oases without the need for water or intensive upkeep.',
-      features: ['Weather Resistant', 'No Watering Needed', 'Environment Friendly', 'Safe for Pets'],
+      desc: 'Lush, maintenance-free artificial turf that stays green all year round. Perfect for rooftops and balconies.',
     },
     { 
       title: 'Area Rugs & Designer Rugs', 
       img: '/images/rug.png', 
-      desc: 'A handpicked collection of premium area rugs and oriental patterns. From minimalist geometric shapes to traditional Jaipur-style craftsmanship, our rugs serve as exquisite accent pieces for any room.',
-      features: ['Artisan Crafted', 'Soft Texture', 'Unique Designs', 'Premium Quality'],
+      desc: 'Handpicked decorative rugs featuring traditional craftsmanship and modern minimalist patterns.',
     },
     { 
       title: 'Designer Wallpaper', 
       img: '/images/wallpaper.png', 
-      desc: 'Transform your walls with our curated selection of designer wallpapers. We offer high-quality textured, metallic, and patterned wallpapers that can add depth, elegance, and personality to any interior space.',
-      features: ['Easy Application', 'Rich Textures', 'Designer Patterns', 'Washable Options'],
+      desc: 'Transform your walls with high-quality textured, metallic, and patterned wallpapers for any interior.',
     },
     { 
       title: 'Louver Panels (LUARS)', 
       img: '/images/louvers.png', 
-      desc: 'Stylish and modern Louver panels (LUARS) designed for high-end wall treatments and decorative highlights. These panels offer a sophisticated three-dimensional look that adds architectural interest to any contemporary interior.',
-      features: ['Architectural Depth', 'Moisture Resistant', 'Modern Aesthetic', 'Premium Finish'],
+      desc: 'Modern LUARS panels for stylish wall treatments that add architectural depth and elegance to your room.',
+    },
+    { 
+      title: 'Staircase Carpeting', 
+      img: '/images/who-we-are.jpg', 
+      desc: 'Professional installation of durable carpets on staircases, providing safety and a premium look for your home.',
     },
   ];
 
@@ -75,26 +73,22 @@ const Services = () => {
             {products.map((product, index) => (
               <motion.div 
                 key={product.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: (index % 3) * 0.1, duration: 0.6 }}
+                transition={{ delay: (index % 4) * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="product-card glass-card"
+                className="product-card"
+                onClick={() => window.open('https://wa.me/919462670966', '_blank')}
               >
-                <div className="product-image">
-                  <img src={product.img} alt={product.title} />
-                </div>
-                <div className="product-content">
-                  <h2 className="gradient-text">{product.title}</h2>
-                  <p className="product-desc">{product.desc}</p>
-                  <ul className="product-features">
-                    {product.features.map((feature, idx) => (
-                      <li key={idx}><CheckCircle2 size={16} color="var(--secondary)" /> {feature}</li>
-                    ))}
-                  </ul>
-                  <a href="https://wa.me/919462670966" className="btn-primary product-cta" target="_blank" rel="noopener noreferrer">
-                    <ShoppingBag size={18} /> Inquire Now
-                  </a>
+                <img src={product.img} alt={product.title} className="product-bg-img" />
+                <div className="product-overlay"></div>
+                <div className="product-info-card">
+                   <h2 className="gradient-text">{product.title}</h2>
+                   <p>{product.desc}</p>
+                   <a href="https://wa.me/919462670966" target="_blank" rel="noopener noreferrer" className="product-learn-more">
+                     <span>Learn More</span>
+                     <ArrowRight size={18} />
+                   </a>
                 </div>
               </motion.div>
             ))}
