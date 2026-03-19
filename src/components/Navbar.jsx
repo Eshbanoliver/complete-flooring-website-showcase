@@ -53,7 +53,7 @@ const Navbar = () => {
       <nav className="main-nav">
         <div className="main-nav-container">
           <Link to="/" className="navbar-logo">
-            <img src="/images/logo.jpg" alt="Complete Flooring Company" />
+            <img src="/images/logo.png" alt="Complete Flooring Company" />
           </Link>
 
           {/* Desktop Links */}

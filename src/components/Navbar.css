@@ -79,19 +79,32 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-.navbar-logo img {
-  height: 65px;
-  width: auto;
+.navbar-logo {
+  height: 70px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent spill over the pill edges */
+  position: relative;
   transition: all 0.4s ease;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  transform: scale(1.1);
-  transform-origin: left center;
 }
 
-.navbar-header.scrolled .navbar-logo img {
-  height: 55px;
-  transform: scale(1.15);
+.navbar-logo img {
+  height: 160%; /* Taller than container to zoom */
+  width: 160%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: all 0.4s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar-header.scrolled .navbar-logo {
+  height: 60px;
+  width: 160px;
 }
 
 .navbar-links {

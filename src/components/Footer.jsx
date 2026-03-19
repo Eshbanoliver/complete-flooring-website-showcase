@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="container footer-grid">
           <div className="footer-info">
             <Link to="/" className="footer-logo" style={{ display: 'inline-block', marginBottom: '1.5rem' }}>
-              <img src="/images/logo.jpg" alt="Complete Flooring Company" style={{ height: '55px', width: 'auto' }} />
+              <img src="/images/logo.png" alt="Complete Flooring Company" style={{ height: '55px', width: 'auto' }} />
             </Link>
             <p className="footer-desc">Premium flooring solutions for your dream spaces. We provide high-quality flooring services across Jaipur and beyond.</p>
             <div className="social-links">
