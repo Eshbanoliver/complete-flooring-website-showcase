@@ -16,8 +16,6 @@ const Footer = () => {
             </Link>
             <p className="footer-desc">Premium flooring solutions for your dream spaces. We provide high-quality flooring services across Jaipur and beyond.</p>
             <div className="social-links">
-              {/* Links are blank as requested */}
-              <a href="#" className="social-icon"><Facebook /></a>
               <a href="https://www.instagram.com/completeflooringcompany/" target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram /></a>
             </div>
           </div>

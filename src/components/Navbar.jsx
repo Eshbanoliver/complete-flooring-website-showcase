@@ -41,10 +41,9 @@ const Navbar = () => {
           </div>
           <div className="top-bar-right">
             <div className="social-links">
-              <a href="#"><Facebook size={16} /></a>
-              <a href="#"><Twitter size={16} /></a>
-              <a href="#"><Youtube size={16} /></a>
-              <a href="#"><Instagram size={16} /></a>
+              <a href="https://www.instagram.com/completeflooringcompany/" target="_blank" rel="noopener noreferrer">
+                <Instagram size={16} />
+              </a>
             </div>
           </div>
         </div>
