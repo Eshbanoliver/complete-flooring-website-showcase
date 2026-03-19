@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages - placeholder for now
 import Home from './pages/Home';
@@ -15,6 +16,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         <Navbar />
         <main>
