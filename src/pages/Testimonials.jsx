@@ -120,7 +120,7 @@ const Testimonials = () => {
                 <div className="testimonial-author">
                   <div className="author-avatar-wrapper">
                     <div className="author-avatar">
-                      {t.avatar ? <span>{t.avatar}</span> : <User size={28} color="var(--secondary)" />}
+                      <User size={28} color="var(--secondary)" />
                     </div>
                   </div>
                   <div className="author-info">
