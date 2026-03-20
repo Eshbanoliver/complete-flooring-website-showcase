@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import KeyMetrics from '../components/KeyMetrics';
 import ServicesPreview from '../components/ServicesPreview';
-import MissionVision from '../components/MissionVision';
 import CoreValues from '../components/CoreValues';
 import WhyChooseUs from '../components/WhyChooseUs';
 import HomeFAQ from '../components/HomeFAQ';
@@ -156,15 +155,12 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
+      
       {/* Key Metrics Section */}
       <KeyMetrics />
 
       {/* Services Preview */}
       <ServicesPreview />
-
-      {/* Mission & Vision Section */}
-      <MissionVision />
 
       {/* Core Values Section */}
       <CoreValues />
