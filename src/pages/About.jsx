@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import MissionVision from '../components/MissionVision';
 import CoreValues from '../components/CoreValues';
 import WhyChooseUs from '../components/WhyChooseUs';
+import OurProcess from '../components/OurProcess';
 import HomeCTA from '../components/HomeCTA';
 import './About.css';
 
@@ -73,6 +74,7 @@ const About = () => {
 
       <MissionVision />
       <CoreValues />
+      <OurProcess />
       <WhyChooseUs />
       <HomeCTA />
     </div>
