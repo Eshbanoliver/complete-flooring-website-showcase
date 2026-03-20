@@ -39,7 +39,7 @@ const Testimonials = () => {
       role: 'HR Manager', 
       quote: "The area rug we purchased for our living room is a masterpiece. It ties the whole room together beautifully. The staff was very helpful in helping us choose the right size and texture.", 
       rating: 5,
-      avatar: 'PB'
+      avatar: null // Will show golden user icon
     },
     { 
       name: 'Rahul Verma', 
@@ -120,7 +120,7 @@ const Testimonials = () => {
                 <div className="testimonial-author">
                   <div className="author-avatar-wrapper">
                     <div className="author-avatar">
-                      {t.avatar ? <span>{t.avatar}</span> : <User size={24} />}
+                      {t.avatar ? <span>{t.avatar}</span> : <User size={28} color="var(--secondary)" />}
                     </div>
                   </div>
                   <div className="author-info">

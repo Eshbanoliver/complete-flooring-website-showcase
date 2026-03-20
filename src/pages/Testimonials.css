@@ -244,33 +244,6 @@
   }
 }
 
-/* Testimonials CTA Customization */
-.testimonials-page .cta-section {
-  margin: 4rem 5% 8rem 5%;
-  border-radius: 4rem;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-}
-
-.testimonials-page .cta-card {
-  background: transparent;
-  border: none;
-  backdrop-filter: none;
-  box-shadow: none;
-  padding: 4rem 2rem;
-}
-
-.testimonials-page .cta-card:hover {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-@media (max-width: 768px) {
-  .testimonials-page .cta-section {
-    margin: 2rem 3% 4rem 3%;
-    border-radius: 2.5rem;
-  }
-}
 
 @media (max-width: 480px) {
   .testimonial-modern-card {
