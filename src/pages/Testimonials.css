@@ -80,7 +80,7 @@
 /* Modern Testimonial Card Design - Light Theme */
 .testimonial-modern-card {
   background: #ffffff;
-  border: 2px solid rgba(58, 3, 83, 0.25); /* Clearly visible purple outline */
+  border: 2px solid rgba(58, 3, 83, 0.8); /* High visibility purple outline */
   border-radius: 2.5rem;
   padding: 3rem;
   display: flex;
