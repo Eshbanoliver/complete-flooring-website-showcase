@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, Palette, Ruler, Hammer, Sparkles } from 'lucide-react';
+import { MessageSquare, Palette, Ruler, Hammer, Sparkles, HeadphonesIcon, SwatchBook, ScanLine, Wrench, BadgeCheck } from 'lucide-react';
 import './OurProcess.css';
 
 const OurProcess = () => {
@@ -10,6 +10,8 @@ const OurProcess = () => {
       title: 'Consultation',
       desc: 'Share your vision with us. We listen, understand your needs, budget, and style preferences to craft the perfect plan.',
       icon: <MessageSquare size={28} />,
+      decorIcon: <MessageSquare size={48} />,
+      bigIcon: <HeadphonesIcon size={56} strokeWidth={1.5} />,
       color: '#FF6B6B',
       gradient: 'linear-gradient(135deg, #FF6B6B, #EE5A24)',
     },
@@ -18,6 +20,8 @@ const OurProcess = () => {
       title: 'Design & Selection',
       desc: 'Browse our curated collection. Our experts help you pick the ideal flooring material, pattern, and finish for your space.',
       icon: <Palette size={28} />,
+      decorIcon: <Palette size={48} />,
+      bigIcon: <SwatchBook size={56} strokeWidth={1.5} />,
       color: '#4ECDC4',
       gradient: 'linear-gradient(135deg, #4ECDC4, #2BC0B4)',
     },
@@ -26,6 +30,8 @@ const OurProcess = () => {
       title: 'Measurement',
       desc: 'Our team visits your site for precise measurements and surface assessment, ensuring a flawless fit every time.',
       icon: <Ruler size={28} />,
+      decorIcon: <Ruler size={48} />,
+      bigIcon: <ScanLine size={56} strokeWidth={1.5} />,
       color: '#A855F7',
       gradient: 'linear-gradient(135deg, #A855F7, #7C3AED)',
     },
@@ -34,6 +40,8 @@ const OurProcess = () => {
       title: 'Installation',
       desc: 'Skilled craftsmen install your flooring with precision and care, using industry-best techniques for lasting durability.',
       icon: <Hammer size={28} />,
+      decorIcon: <Hammer size={48} />,
+      bigIcon: <Wrench size={56} strokeWidth={1.5} />,
       color: '#F59E51',
       gradient: 'linear-gradient(135deg, #F59E51, #E67E22)',
     },
@@ -42,6 +50,8 @@ const OurProcess = () => {
       title: 'Final Walkthrough',
       desc: 'We inspect every detail together. Your satisfaction is our benchmark — we ensure perfection before we call it done.',
       icon: <Sparkles size={28} />,
+      decorIcon: <Sparkles size={48} />,
+      bigIcon: <BadgeCheck size={56} strokeWidth={1.5} />,
       color: '#6B46C1',
       gradient: 'linear-gradient(135deg, #6B46C1, #9333EA)',
     },
@@ -113,6 +123,9 @@ const OurProcess = () => {
                   <p className="step-desc">{step.desc}</p>
                 </div>
 
+                {/* Decorative icon on the right */}
+                <div className="step-decor-icon">{step.decorIcon}</div>
+
                 {/* Animated border */}
                 <div className="step-border-glow"></div>
               </div>
@@ -120,6 +133,14 @@ const OurProcess = () => {
               {/* Timeline node */}
               <div className="timeline-node" style={{ '--step-color': step.color, '--step-gradient': step.gradient }}>
                 <span className="node-number">{step.number}</span>
+              </div>
+
+              {/* Large icon on the opposite empty side */}
+              <div className="step-opposite-icon" style={{ '--step-color': step.color, '--step-gradient': step.gradient }}>
+                <div className="opposite-icon-inner">
+                  {step.bigIcon}
+                </div>
+                <span className="opposite-icon-label">{step.title}</span>
               </div>
             </motion.div>
           ))}
