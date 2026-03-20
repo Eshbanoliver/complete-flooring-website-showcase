@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import HomeCTA from '../components/HomeCTA';
 import './Services.css';
 
 const Services = () => {
+  const navigate = useNavigate();
   const products = [
     { 
       title: 'Wooden Laminates', 
@@ -78,17 +80,17 @@ const Services = () => {
                 transition={{ delay: (index % 4) * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
                 className="product-card"
-                onClick={() => window.open('https://wa.me/919462670966', '_blank')}
+                onClick={() => navigate('/contact')}
               >
                 <img src={product.img} alt={product.title} className="product-bg-img" />
                 <div className="product-overlay"></div>
                 <div className="product-info-card">
                    <h2 className="gradient-text">{product.title}</h2>
                    <p>{product.desc}</p>
-                   <a href="https://wa.me/919462670966" target="_blank" rel="noopener noreferrer" className="product-learn-more">
-                     <span>Learn More</span>
+                   <Link to="/contact" className="product-learn-more">
+                     <span>Contact Us</span>
                      <ArrowRight size={18} />
-                   </a>
+                   </Link>
                 </div>
               </motion.div>
             ))}
