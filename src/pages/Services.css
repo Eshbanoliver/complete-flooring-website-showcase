@@ -57,20 +57,22 @@
   bottom: 25px;
   left: 20px;
   right: 20px;
-  background: rgba(88, 43, 94, 0.82); /* Dark purple translucent */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(58, 3, 83, 0.35); /* Liquid glass - less opacity */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 2rem;
   border-radius: 20px;
   z-index: 3;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-card:hover .product-info-card {
-  background: rgba(58, 3, 83, 0.95);
+  background: rgba(58, 3, 83, 0.55);
   transform: translateY(-5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .product-info-card h2 {
@@ -88,6 +90,7 @@
   margin-bottom: 1.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
