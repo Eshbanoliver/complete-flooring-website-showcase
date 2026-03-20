@@ -80,7 +80,7 @@
 /* Modern Testimonial Card Design - Light Theme */
 .testimonial-modern-card {
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(58, 3, 83, 0.15); /* Purple outline */
   border-radius: 2.5rem;
   padding: 3rem;
   display: flex;
@@ -89,7 +89,7 @@
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 30px rgba(58, 3, 83, 0.05);
 }
 
 .testimonial-modern-card::before {
@@ -99,16 +99,16 @@
   left: 0;
   right: 0;
   height: 100%;
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.03), transparent);
+  background: linear-gradient(135deg, rgba(248, 210, 153, 0.05), transparent);
   opacity: 0;
   transition: opacity 0.6s ease;
 }
 
 .testimonial-modern-card:hover {
   transform: translateY(-15px) scale(1.02);
-  border-color: rgba(168, 85, 247, 0.2);
+  border-color: var(--primary); /* Stronger purple on hover */
   background: #ffffff;
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 60px -20px rgba(58, 3, 83, 0.15);
 }
 
 .testimonial-modern-card:hover::before {
@@ -127,19 +127,20 @@
 .quote-badge {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #a855f7, #ec4899);
+  background: linear-gradient(135deg, var(--secondary), var(--accent)); /* Golden gradient */
   border-radius: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--primary); /* Contrast color */
   transform: rotate(-5deg);
   transition: transform 0.4s ease;
-  box-shadow: 0 8px 15px rgba(168, 85, 247, 0.2);
+  box-shadow: 0 8px 15px rgba(245, 158, 81, 0.2);
 }
 
 .testimonial-modern-card:hover .quote-badge {
   transform: rotate(0deg) scale(1.1);
+  box-shadow: 0 12px 25px rgba(245, 158, 81, 0.4);
 }
 
 .rating-stars {
@@ -150,7 +151,7 @@
 .testimonial-text {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #4a5568; /* Darker gray for readability on white */
+  color: #4a5568;
   font-style: italic;
   font-weight: 400;
   margin: 0 0 2rem 0;
@@ -165,7 +166,7 @@
   align-items: center;
   gap: 1.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(58, 3, 83, 0.1);
   position: relative;
   z-index: 10;
 }
@@ -179,11 +180,11 @@
   height: 60px;
   border-radius: 1.25rem;
   background: #f8f9fa;
-  border: 1px solid rgba(168, 85, 247, 0.2);
+  border: 2px solid var(--secondary); /* Golden border */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #a855f7;
+  color: var(--primary);
   font-weight: 800;
   font-size: 1.2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
@@ -191,13 +192,13 @@
 }
 
 .testimonial-modern-card:hover .author-avatar {
-  border-color: #ec4899;
+  border-color: var(--accent);
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.1);
+  box-shadow: 0 10px 20px rgba(245, 158, 81, 0.1);
 }
 
 .author-info h4 {
-  color: #1a0126; /* Dark purple/black for name */
+  color: var(--primary); /* Purple color for name */
   font-size: 1.25rem;
   margin: 0 0 5px 0;
   font-weight: 700;
@@ -205,7 +206,7 @@
 }
 
 .author-info p {
-  color: #a855f7;
+  color: var(--accent); /* Golden color for role */
   font-size: 0.75rem;
   margin: 0;
   text-transform: uppercase;
@@ -213,7 +214,7 @@
   letter-spacing: 1.5px;
 }
 
-/* Bottom Glow Accent */
+/* Bottom Glow Accent - Golden */
 .testimonial-modern-card::after {
   content: '';
   position: absolute;
@@ -221,7 +222,7 @@
   left: 50%;
   width: 0;
   height: 4px;
-  background: linear-gradient(90deg, #a855f7, #ec4899);
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateX(-50%);
   border-radius: 4px;
@@ -231,6 +232,7 @@
 .testimonial-modern-card:hover::after {
   width: 60%;
 }
+
 
 @media (max-width: 992px) {
   .all-testimonials-grid {
