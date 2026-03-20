@@ -98,9 +98,7 @@ const Services = () => {
         </div>
       </section>
 
-      <div className="seo-content container" style={{ padding: '4rem 2rem', textAlign: 'center', opacity: 0.8 }}>
-        <p>If you are searching for a <strong>Flooring Dealer Near Me</strong> or **Wall-to-Wall Carpet Near Me**, we provide quality products and reliable service. We are also a trusted **Carpet Dealer in Jaipur** and **Rugs Dealer in Jaipur**, offering stylish and durable flooring solutions. Looking for an **Artificial Grass Dealer Near Me**? Visit COMPLETE FLOORING COMPANY for a wide range of flooring options.</p>
-      </div>
+
 
       <HomeCTA />
     </div>
