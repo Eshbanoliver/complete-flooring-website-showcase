@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote, User } from 'lucide-react';
+import HomeCTA from '../components/HomeCTA';
 import './Testimonials.css';
 
 const Testimonials = () => {
@@ -132,6 +133,7 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
+      <HomeCTA />
     </div>
   );
 };
