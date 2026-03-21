@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Instagram, Facebook, ArrowRight } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -187,9 +187,49 @@ const Contact = () => {
 
       <section className="map-section section-padding">
         <div className="container">
-          <div className="map-placeholder glass-card p-0" style={{ padding: 0, height: '400px', overflow: 'hidden' }}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56946.62249755539!2d75.71356824863281!3d26.866533100000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5003ebf79df%3A0x1c20d968900855af!2sCOMPLETE%20FLOORING%20COMPANY!5e0!3m2!1sen!2sin!4v1773825030085!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0, borderRadius: '16px' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="map-container-modern"
+          >
+            <div className="map-overlay-card glass-card">
+              <div className="overlay-badge">Main Office</div>
+              <h3>Complete Flooring Company</h3>
+              <p>Jaipur's leading flooring solutions since 2012.</p>
+              <div className="overlay-details">
+                <div className="detail-item">
+                  <MapPin size={16} />
+                  <span>Tonk Road, Jaipur</span>
+                </div>
+                <div className="detail-item">
+                  <Phone size={16} />
+                  <span>+91 9462670966</span>
+                </div>
+              </div>
+              <a 
+                href="https://maps.app.goo.gl/K8r7f8j8vS2R6HZM6" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-directions"
+              >
+                Get Directions <ArrowRight size={14} />
+              </a>
+            </div>
+            
+            <div className="map-iframe-wrapper">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56946.62249755539!2d75.71356824863281!3d26.866533100000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5003ebf79df%3A0x1c20d968900855af!2sCOMPLETE%20FLOORING%20COMPANY!5e0!3m2!1sen!2sin!4v1773825030085!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
