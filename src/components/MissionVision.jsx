@@ -6,10 +6,6 @@ import './MissionVision.css';
 const MissionVision = () => {
   return (
     <section className="mission-vision-section section-padding">
-      <div className="section-decor">
-        <div className="decor-blob blob-1"></div>
-        <div className="decor-blob blob-2"></div>
-      </div>
       <div className="container mission-vision-grid">
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
