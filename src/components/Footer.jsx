@@ -54,7 +54,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            ©️ Copyright 2026 | Complete Flooring Company | All Rights Reserved | Powered by{' '}
+            ©️ Copyright 2026 | <Link to="/" className="footer-copyright-link">Complete Flooring Company</Link> | All Rights Reserved | Powered by{' '}
             <a href="https://shapesway.in" target="_blank" rel="noopener noreferrer" style={{ color: '#28a745', textDecoration: 'none', fontWeight: 600 }}>
               Shapesway Technologies Pvt. Ltd.
             </a>
