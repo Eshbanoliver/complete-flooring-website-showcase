@@ -124,41 +124,42 @@ const Contact = () => {
             viewport={{ once: true }}
             className="contact-form-wrapper glass-card"
           >
+            <div className="form-glow"></div>
             <h2 className="title">Send Us a <span className="gradient-text">Message</span></h2>
             <p className="desc">Fill out the form below and we will get back to you within 24 hours.</p>
             
             <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-group">
-                <input 
-                  type="text" 
-                  name="name" 
-                  value={formData.name} 
-                  onChange={handleChange} 
-                  placeholder="Full Name" 
-                  required 
-                />
-              </div>
-              <div className="form-group">
-                <input 
-                  type="tel" 
-                  name="phone" 
-                  value={formData.phone} 
-                  onChange={handleChange} 
-                  placeholder="Phone Number" 
-                  required 
-                />
-              </div>
-              <div className="form-group">
-                <input 
-                  type="email" 
-                  name="email" 
-                  value={formData.email} 
-                  onChange={handleChange} 
-                  placeholder="Email Address" 
-                  required 
-                />
-              </div>
-              <div className="form-group">
+              {[
+                { name: 'name', type: 'text', placeholder: 'Full Name', icon: <MapPin size={18} />, delay: 0.1 },
+                { name: 'phone', type: 'tel', placeholder: 'Phone Number', icon: <Phone size={18} />, delay: 0.2 },
+                { name: 'email', type: 'email', placeholder: 'Email Address', icon: <Mail size={18} />, delay: 0.3 }
+              ].map((field) => (
+                <motion.div 
+                  key={field.name}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: field.delay, duration: 0.5 }}
+                  className="form-group-modern"
+                >
+                  <div className="input-icon-wrapper">{field.icon}</div>
+                  <input 
+                    type={field.type}
+                    name={field.name}
+                    value={formData[field.name]} 
+                    onChange={handleChange} 
+                    placeholder={field.placeholder} 
+                    required 
+                  />
+                  <div className="input-focus-line"></div>
+                </motion.div>
+              ))}
+
+              <motion.div 
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                className="form-group-modern textarea-group"
+              >
                 <textarea 
                   name="message" 
                   value={formData.message} 
@@ -167,10 +168,18 @@ const Contact = () => {
                   rows="5" 
                   required 
                 ></textarea>
-              </div>
-              <button type="submit" className="btn-primary form-submit">
+                <div className="input-focus-line"></div>
+              </motion.div>
+
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit" 
+                className="btn-primary form-submit-modern"
+              >
+                <div className="btn-shine"></div>
                 <Send size={18} /> Send Message
-              </button>
+              </motion.button>
             </form>
           </motion.div>
         </div>
