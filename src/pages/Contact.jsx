@@ -40,6 +40,10 @@ const Contact = () => {
       </section>
 
       <section className="contact-details section-padding">
+        <div className="section-decor">
+          <div className="decor-blob blob-1"></div>
+          <div className="decor-blob blob-2"></div>
+        </div>
         <div className="container contact-grid">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -48,37 +52,69 @@ const Contact = () => {
             viewport={{ once: true }}
             className="contact-info-cards"
           >
-            <div className="contact-card glass-card">
-              <div className="icon-wrapper"><MapPin size={24} /></div>
-              <div className="info-content">
-                <h3>Our Address</h3>
-                <p>Floor No.: B-67, Building No./Flat No.: Kirti Nagar, <br />Road/Street: Tonk Road, Jaipur</p>
-              </div>
-            </div>
+            {[
+              { 
+                icon: <MapPin size={24} />, 
+                title: "Our Address", 
+                content: <p>Floor No.: B-67, Building No./Flat No.: Kirti Nagar, <br />Road/Street: Tonk Road, Jaipur</p>,
+                delay: 0.1
+              },
+              { 
+                icon: <Phone size={24} />, 
+                title: "Phone & WhatsApp", 
+                content: (
+                  <>
+                    <p>Call: <a href="tel:+919462670966">+91 9462670966</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/919462670966">+91 9462670966</a></p>
+                  </>
+                ),
+                delay: 0.2
+              },
+              { 
+                icon: <Mail size={24} />, 
+                title: "Email Us", 
+                content: <p><a href="mailto:completeflooringcompany@gmail.com">completeflooringcompany@gmail.com</a></p>,
+                delay: 0.3
+              }
+            ].map((card, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: card.delay, duration: 0.5 }}
+                whileHover={{ x: 15, scale: 1.02 }}
+                viewport={{ once: true }}
+                className="contact-card glass-card"
+              >
+                <div className="icon-wrapper circle-glow">{card.icon}</div>
+                <div className="info-content">
+                  <h3>{card.title}</h3>
+                  {card.content}
+                </div>
+              </motion.div>
+            ))}
 
-            <div className="contact-card glass-card">
-              <div className="icon-wrapper"><Phone size={24} /></div>
-              <div className="info-content">
-                <h3>Phone & WhatsApp</h3>
-                <p>Call: <a href="tel:+919462670966">+91 9462670966</a></p>
-                <p>WhatsApp: <a href="https://wa.me/919462670966">+91 9462670966</a></p>
-              </div>
-            </div>
-
-            <div className="contact-card glass-card">
-              <div className="icon-wrapper"><Mail size={24} /></div>
-              <div className="info-content">
-                <h3>Email Us</h3>
-                <p><a href="mailto:completeflooringcompany@gmail.com">completeflooringcompany@gmail.com</a></p>
-              </div>
-            </div>
-
-            <div className="contact-socials glass-card">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              whileHover={{ scale: 1.02 }}
+              viewport={{ once: true }}
+              className="contact-socials glass-card"
+            >
                <h3>Follow Us</h3>
                <div className="social-links-row">
-                 <a href="https://www.instagram.com/completeflooringcompany/" target="_blank" rel="noopener noreferrer" className="social-link"><Instagram size={24} /></a>
+                 <motion.a 
+                   whileHover={{ y: -5, scale: 1.2, color: 'var(--accent)' }}
+                   href="https://www.instagram.com/completeflooringcompany/" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   className="social-link instagram"
+                 >
+                   <Instagram size={24} />
+                 </motion.a>
                </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div 
