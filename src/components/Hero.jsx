@@ -18,10 +18,10 @@ const slides = [
     description: 'Elevate your living spaces with our exquisite range of designer carpets featuring timeless patterns and superior comfort.'
   },
   {
-    image: '/images/hero-rugs-office.png',
-    title: 'Modern <span class="gradient-text">Executive Rugs</span> & Office Flooring',
+    image: '/images/hero-multiple-rugs.png',
+    title: 'Diverse <span class="gradient-text">Rug Collections</span> & Office Solutions',
     subtitle: 'Professional & Durable',
-    description: 'Boost your workspace aesthetic with our high-performance carpet tiles and premium rugs designed for heavy traffic areas.'
+    description: 'Explore our vast gallery of premium rugs and carpet tiles, featuring a wide array of patterns, textures, and styles for any space.'
   }
 ];
 
